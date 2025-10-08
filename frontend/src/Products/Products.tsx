@@ -1,11 +1,11 @@
 import React from 'react';
-import data from './data';
+import data from "./data";
 
  function Products() {
     return (
-        <div className ="content">
+    <div className ="content">
         <ul className="products">
-  {data.products.map((product) => (
+        {data.products.map((product) => (
     <li className="product" key={product.name}>
       <img
         className="product-image"
@@ -19,9 +19,12 @@ import data from './data';
       <div className="product-price">${product.price}</div>
       <div className="product-rating">
         {product.rating} Stars ({product.numberOfReviews} Reviews)
-         </div>
+      </div>
     </li>
   ))}
-</ul>
-
+  
+      </ul>
+  </div>
+    );
+  }
 export default Products;
